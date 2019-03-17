@@ -1,0 +1,95 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE>一个简单的HTML管理员登录界面_网页代码站(www.webdm.cn)</TITLE><LINK 
+rel=stylesheet type=text/css href="images/css.css">
+<STYLE type=text/css>
+body td {
+	FONT-SIZE: 9pt;
+}
+</STYLE>
+</HEAD>
+<BODY bgColor=#ffffff><BR><BR>
+<TABLE border=0 cellSpacing=0 cellPadding=0 width=478 align=center>
+  <TBODY>
+  <TR>
+    <TD width=26><IMG border=0 src="" width=26 height=1></TD>
+    <TD width=211><IMG border=0 src="" width=211 height=1></TD>
+    <TD width=210><IMG border=0 src="" width=210 height=1></TD>
+    <TD width=30><IMG border=0 src="" width=30 height=1></TD>
+    <TD width=1><IMG border=0 src="" width=1 height=1></TD></TR>
+  <TR>
+    <TD bgColor=#ffcc00 colSpan=4>
+      <DIV class=STYLE1 align=center>管理员登录</DIV></TD>
+    <TD width=1><IMG border=0 src="" width=1 height=65></TD></TR>
+  <TR>
+    <TD rowSpan=2 width=26><IMG border=0 name=login_r3_c1 
+      src="/images/20131117/login_r3_c1.jpg" width=26 height=96></TD>
+    <TD bgColor=#f4f9fd vAlign=center colSpan=2>
+      <FORM onsubmit="return check()" method=post name=admininfo 
+      action=admin.asp>
+      <TABLE class=d border=0 cellSpacing=0 cellPadding=0 width="103%" 
+      align=center height=59>
+        <TBODY>
+        <TR bgColor=#f1f9fe>
+          <TD height=30 width="48%" colSpan=2>
+            <DIV align=left>帐&nbsp; 号：<INPUT 
+            style="BORDER-BOTTOM: 1px solid; BORDER-LEFT: 1px solid; PADDING-BOTTOM: 1px; PADDING-LEFT: 4px; PADDING-RIGHT: 4px; BORDER-TOP: 1px solid; BORDER-RIGHT: 1px solid; PADDING-TOP: 1px" 
+            class=kuang name=adminname></DIV></TD>
+          <TD height=30 width="49%">密&nbsp; 码： <INPUT 
+            style="BORDER-BOTTOM: 1px solid; BORDER-LEFT: 1px solid; PADDING-BOTTOM: 1px; PADDING-LEFT: 4px; PADDING-RIGHT: 4px; BORDER-TOP: 1px solid; BORDER-RIGHT: 1px solid; PADDING-TOP: 1px" 
+            class=kuang type=password name=adminpsw></TD>
+          <TD height=59 rowSpan=2 width="3%">　</TD></TR>
+        <TR bgColor=#f1f9fe>
+          <TD height=29 width="21%">
+            <DIV align=left>
+            <P>验证：<INPUT 
+            style="BORDER-BOTTOM: 1px solid; BORDER-LEFT: 1px solid; PADDING-BOTTOM: 1px; PADDING-LEFT: 4px; PADDING-RIGHT: 4px; BORDER-TOP: 1px solid; BORDER-RIGHT: 1px solid; PADDING-TOP: 1px" 
+            size=4 name=code></P></DIV></TD>
+          <TD height=29 width="27%" align=left><IMG 
+            style="HEIGHT: 20px; CURSOR: pointer" 
+            onclick="this.src='getcode.asp'" alt=验证码,看不清楚?请点击刷新验证码 
+            src="/images/20131117/getcode.jpg"> </TD>
+          <TD height=29 width="49%">
+            <P align=center><INPUT border=0 src="/images/20131117/login.jpg" width=73 
+            height=17 type=image 
+    name=imageField3></P></TD></TR></TBODY></TABLE></FORM></TD>
+    <TD rowSpan=2 width=30><IMG border=0 name=login_r3_c4 
+      src="/images/20131117/login_r3_c4.jpg" width=30 height=96></TD>
+    <TD width=1><IMG border=0 src="" width=1 height=91></TD></TR>
+  <TR>
+    <TD colSpan=2><IMG border=0 name=login_r4_c2 
+      src="/images/20131117/login_r4_c2.jpg" width=421 height=5></TD>
+    <TD width=1><IMG border=0 src="" width=1 height=5></TD></TR></TBODY></TABLE>
+<SCRIPT language=javascript>
+<!--
+function checkspace(checkstr) {
+  var str = '';
+  for(i = 0; i < checkstr.length; i++) {
+    str = str + ' ';
+  }
+  return (str == checkstr);
+}
+function check()
+{
+  if(checkspace(document.admininfo.adminname.value)) {
+	document.admininfo.adminname.focus();
+    alert("管理员不能为空！");
+	return false;
+  }
+  if(checkspace(document.admininfo.adminpsw.value)) {
+	document.admininfo.adminpsw.focus();
+    alert("密码不能为空！");
+	return false;
+  }
+  if(checkspace(document.admininfo.code.value)) {
+	document.admininfo.code.focus();
+    alert("验证码不能为空！");
+	return false;
+  }
+	document.admininfo.submit();
+  }
+//-->
+</SCRIPT>
+<br>
+<p><a href="http://www.yiban.cn">易班</a> - 武院易班！</p>
+</BODY>
+</HTML>
